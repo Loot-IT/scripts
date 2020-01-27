@@ -6,7 +6,7 @@ creds="$username-creds.txt"
 
 addUser()
 {
-if [ -z "$3" ]; then
+if [ -z "$password" ]; then
 	password=$(date +%s | sha256sum | base64 | head -c 12 ; echo)
 fi
 
